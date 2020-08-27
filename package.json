@@ -6,10 +6,23 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "test": "jest"
   },
   "dependencies": {
+    "@nuxtjs/composition-api": "^0.12.3",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@octokit/rest": "^18.0.3",
+    "@vue/composition-api": "^1.0.0-beta.11",
+    "github-api": "^3.3.0",
     "nuxt": "^2.14.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@nuxt/types": "^2.14.3",
+    "@nuxt/typescript-build": "^2.0.2",
+    "@types/jest": "^26.0.10",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.3.0",
+    "vue-jest": "^3.0.6"
+  }
 }

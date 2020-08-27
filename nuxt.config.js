@@ -1,3 +1,4 @@
+require('dotenv').config()
 
 export default {
   /*
@@ -22,8 +23,12 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' }
     ]
+  },
+  env: {
+    GH_TOKEN: process.env.GH_TOKEN
   },
   /*
   ** Global CSS
@@ -35,6 +40,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    "~/services/RepositoryService.ts"
   ],
   /*
   ** Auto import components
@@ -45,6 +51,9 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
+    "@nuxt/typescript-build",
+    "@nuxtjs/dotenv",
+    "@nuxtjs/composition-api"
   ],
   /*
   ** Nuxt.js modules
